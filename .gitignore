@@ -1,0 +1,9 @@
+/benchmark.properties
+/benchmark-multicast.properties
+/benchmark-remote.properties
+/benchmark-remote-sample.properties
+/benchmark-sample.properties
+/ignite-base-config.xml
+/ignite-localhost-config.xml
+/ignite-multicast-config.xml
+/ignite-remote-config.xml

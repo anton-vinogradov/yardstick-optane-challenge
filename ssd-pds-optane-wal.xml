@@ -24,7 +24,7 @@
     <import resource="ignite-base-config.xml"/>
 
     <bean id="grid.cfg" class="org.apache.ignite.configuration.IgniteConfiguration" parent="base-ignite.cfg">
-		<property name="binaryConfiguration">
+    	<property name="binaryConfiguration">
 			<ref bean="binaryConfiguration"/>
 		</property>
 		<property name="discoverySpi">
@@ -78,5 +78,6 @@
         <property name="walSegmentSize" value="#{1024*1024*1024}"/>
         <property name="storagePath" value="/mnt/ssd/persistence"/>
         <property name="walPath" value="/mnt/pmem1/wal"/>
+		<property name="walArchivePath" value="/mnt/pmem1/wal"/>
     </bean>
 </beans>
