@@ -69,7 +69,7 @@
             <ref bean="dataRegionConfiguration"/>
         </property>
         <!-- Sets property that defines behavior of wal fsync. -->
-        <property name="walMode" value="LOG_ONLY"/>
+        <property name="walMode" value="FSYNC"/>
         <property name="pageSize" value="#{4 * 1024}"/>
 
         <!-- Sets a total number of checkpoints to keep in the WAL history. -->
