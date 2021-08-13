@@ -12,6 +12,10 @@ The aims of this challenge are to:
 We used P4510 and a couple of Optane 200 series at benchmarks.
 Benchmarking configuration was: 1 client with 128 producers and 3 server nodes.
 
-First of all, we benchmarked inmemory case, and gained the following:
+First of all, we benchmarked the in-memory case, and gained the following:
 ![image](https://user-images.githubusercontent.com/1394154/129332244-dc54138e-5965-4551-a0df-f9398c13621a.png)
-This chart represents maximum possible performance at the deployment.
+This chart represents the maximum possible performance at the deployment.
+
+The second measurement was using SSD with LOG_ONLY WAL mode:
+![image](https://user-images.githubusercontent.com/1394154/129332651-32ec074d-a188-4a85-838c-92fcf94f9af2.png)
+And results we gain were pretty close to the in-memory case.
