@@ -24,7 +24,7 @@ And results we gain were pretty close to the in-memory case.
 
 After this we benchmarked SSD with FSYNC WAL mode:
 ![image](https://user-images.githubusercontent.com/1394154/129333006-2b92cfbe-3761-484a-81a5-5c3bbe1d42cb.png)
-And gain huge performance drop at puts (149k -> 7k).
+And gained huge performance drop at puts (149k -> 7k).
 
 And it's time to check if Optane is faster than SSD when used as SSD (FSYNC WAL mode):
 ![image](https://user-images.githubusercontent.com/1394154/129333298-ffd86b97-70a8-49cd-9a76-066c11b1df0f.png)
