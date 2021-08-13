@@ -9,7 +9,7 @@ Just copy repository content to apache-ignite-X.Y.Z-bin/benchmarks/config/ folde
 # AIM
 The aims of this challenge are to:
 - check if it's possible to speed up Apache Ignite using Optane instead of SSD (without Ignite's code modifications)
-- demonstrate a special PMDK plugin for Ignite that provides a performance boost
+- demonstrate that a special PMDK plugin for Ignite provides a performance boost
 
 We used P4510 and a couple of Optane 200 series at benchmarks.
 Benchmarking configuration was: 1 client with 128 producers and 3 server nodes.
