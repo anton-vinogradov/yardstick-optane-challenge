@@ -23,3 +23,15 @@ And results we gain were pretty close to the in-memory case.
 After this we benchmarked SSD with FSYNC WAL mode:
 ![image](https://user-images.githubusercontent.com/1394154/129333006-2b92cfbe-3761-484a-81a5-5c3bbe1d42cb.png)
 And gain huge performance drop at puts (149k -> 7k).
+
+And it's time to check if Optane is faster than SSD when used as SSD (FSYNC WAL mode):
+![image](https://user-images.githubusercontent.com/1394154/129333298-ffd86b97-70a8-49cd-9a76-066c11b1df0f.png)
+And we found it provides the same performance as a good SSD.
+
+The last benchmark we did was checking Optain's couple, first was responsible for persistence, and second for WAL (FSYNC WAL mode):
+![image](https://user-images.githubusercontent.com/1394154/129333609-260b391d-0142-48ab-8e2c-89c5caab191a.png)
+And we got the same numbers.
+
+What it finally means:
+- Optane as fast as good SSD (Optane usage as SSD gives you no additional boost).
+- Optane should be used via PMDK to gain a real boost (we did some PMDK checks and found a boost is possible).
