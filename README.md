@@ -39,7 +39,8 @@ What it finally means:
 - Optane should be used via PMDK to gain a real boost (we did some PMDK checks and found a boost is possible).
 
 # PMDK check
-To check the performance boost gained by Ignite PMDK plugin we're going to develop, we created a special benchmark 'puts', which compares puts speed at the in-memory, SSD, and Optane (both with FSYNC WAL mode).\
+To check the performance boost gained by Ignite PMDK plugin we're going to develop, we created a special benchmark 'puts', which compares puts speed at the in-memory, SSD, and Optane (both with FSYNC WAL mode).
+
 Current results (without PMDK plugin):
 
 LOG_ONLY mode (additional profit from Optane can be the latency boost):
