@@ -43,8 +43,8 @@ To check the performance boost gained by Ignite PMDK plugin we're going to devel
 Current results (without PMDK plugin):
 
 # Helpful scripts
-As written before, we used 1 client node and 3 servers.
-Lest define client node located at localhost and server nodes at 10.0.0.2, 10.0.0.3, 10.0.0.4
+As written before, we used 1 client node and 3 servers.\
+Lest define client node located at localhost and server nodes at 10.0.0.2, 10.0.0.3, 10.0.0.4\
 To create all necessary folders use:
 ```
 ssh 10.0.0.2 'sudo mkdir /mnt/pmem0/persistence; sudo chmod 777 /mnt/pmem0/persistence; sudo mkdir /mnt/pmem0/wal; sudo chmod 777 /mnt/pmem0/wal; sudo mkdir /mnt/pmem1/wal; sudo chmod 777 /mnt/pmem1/wal; sudo mkdir /mnt/ssd/persistence; sudo chmod 777 /mnt/ssd/persistence; sudo mkdir /mnt/ssd/wal; sudo chmod 777 /mnt/ssd/wal;'; ssh 10.0.0.3 'sudo mkdir /mnt/pmem0/persistence; sudo chmod 777 /mnt/pmem0/persistence; sudo mkdir /mnt/pmem0/wal; sudo chmod 777 /mnt/pmem0/wal; sudo mkdir /mnt/pmem1/wal; sudo chmod 777 /mnt/pmem1/wal; sudo mkdir /mnt/ssd/persistence; sudo chmod 777 /mnt/ssd/persistence; sudo mkdir /mnt/ssd/wal; sudo chmod 777 /mnt/ssd/wal;'; ssh 10.0.0.4 'sudo mkdir /mnt/pmem0/persistence; sudo chmod 777 /mnt/pmem0/persistence; sudo mkdir /mnt/pmem0/wal; sudo chmod 777 /mnt/pmem0/wal; sudo mkdir /mnt/pmem1/wal; sudo chmod 777 /mnt/pmem1/wal; sudo mkdir /mnt/ssd/persistence; sudo chmod 777 /mnt/ssd/persistence; sudo mkdir /mnt/ssd/wal; sudo chmod 777 /mnt/ssd/wal;'
