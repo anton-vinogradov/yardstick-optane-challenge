@@ -1,3 +1,4 @@
+# HOWTO
 Just copy repository content to apache-ignite-X.Y.Z-bin/benchmarks/config/ folder and start one of the following benchmarks:
 - inmem (Inmemory mode, no discs used)
 - optane1-pds-optane1-wal (Single Optane used)
@@ -5,6 +6,7 @@ Just copy repository content to apache-ignite-X.Y.Z-bin/benchmarks/config/ folde
 - ssd1-pds-ssd1-wal (Single SSD used)
 - ssd-pds-optane-wal (SSD used to store persistence and Optane to store WAL)
 
+# AIM
 The aims of this challenge are to:
 - check if it's possible to speed up Apache Ignite using Optane instead of SSD (without Ignite's code modifications)
 - prove special PMDK plugin for Ignite provides perfomance boost.
@@ -35,3 +37,7 @@ And we got the same numbers.
 What it finally means:
 - Optane as fast as good SSD (Optane usage as SSD gives you no additional boost).
 - Optane should be used via PMDK to gain a real boost (we did some PMDK checks and found a boost is possible).
+
+# PMDK check
+To check the performance boost gained by Ignite PMDK plugin we're going to develop, we created a special benchmark 'puts', which compares puts speed at the in-memory, SSD, and Optane (both with FSYNC WAL mode).
+Current results (without PMDK plugin):
