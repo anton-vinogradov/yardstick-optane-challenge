@@ -40,7 +40,10 @@ What it finally means:
 
 # PMDK check
 To check the performance boost gained by Ignite PMDK plugin we're going to develop, we created a special benchmark 'puts', which compares puts speed at the in-memory, SSD, and Optane (both with FSYNC WAL mode).\
-Current results (without PMDK plugin):
+Current results (without PMDK plugin):\
+LOG_ONLY mode (additional profit from Optane can be the latency boost):
+![image](https://user-images.githubusercontent.com/1394154/129345170-ed7660c1-9088-43d9-9fee-8965959c9b87.png)
+FSYNC mode:
 ![image](https://user-images.githubusercontent.com/1394154/129338869-a47a3ed5-04e4-4b6d-bf36-cff5dba9ab84.png)
 
 # Helpful scripts
