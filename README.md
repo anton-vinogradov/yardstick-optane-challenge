@@ -19,3 +19,7 @@ This chart represents the maximum possible performance at the deployment.
 The second measurement was using SSD with LOG_ONLY WAL mode:
 ![image](https://user-images.githubusercontent.com/1394154/129332651-32ec074d-a188-4a85-838c-92fcf94f9af2.png)
 And results we gain were pretty close to the in-memory case.
+
+After this we benchmarked SSD with FSYNC WAL mode:
+![image](https://user-images.githubusercontent.com/1394154/129333006-2b92cfbe-3761-484a-81a5-5c3bbe1d42cb.png)
+And gain huge performance drop at puts (149k -> 7k).
