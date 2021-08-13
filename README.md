@@ -41,3 +41,15 @@ What it finally means:
 # PMDK check
 To check the performance boost gained by Ignite PMDK plugin we're going to develop, we created a special benchmark 'puts', which compares puts speed at the in-memory, SSD, and Optane (both with FSYNC WAL mode).
 Current results (without PMDK plugin):
+
+# Helpful scripts
+As written before, we used 1 client node and 3 servers.
+Lest define client node located at localhost and server nodes at 10.0.0.2, 10.0.0.3, 10.0.0.4
+To create all necessary folders use:
+```
+ssh 10.0.0.2 'sudo mkdir /mnt/pmem0/persistence; sudo chmod 777 /mnt/pmem0/persistence; sudo mkdir /mnt/pmem0/wal; sudo chmod 777 /mnt/pmem0/wal; sudo mkdir /mnt/pmem1/wal; sudo chmod 777 /mnt/pmem1/wal; sudo mkdir /mnt/ssd/persistence; sudo chmod 777 /mnt/ssd/persistence; sudo mkdir /mnt/ssd/wal; sudo chmod 777 /mnt/ssd/wal;'; ssh 10.0.0.3 'sudo mkdir /mnt/pmem0/persistence; sudo chmod 777 /mnt/pmem0/persistence; sudo mkdir /mnt/pmem0/wal; sudo chmod 777 /mnt/pmem0/wal; sudo mkdir /mnt/pmem1/wal; sudo chmod 777 /mnt/pmem1/wal; sudo mkdir /mnt/ssd/persistence; sudo chmod 777 /mnt/ssd/persistence; sudo mkdir /mnt/ssd/wal; sudo chmod 777 /mnt/ssd/wal;'; ssh 10.0.0.4 'sudo mkdir /mnt/pmem0/persistence; sudo chmod 777 /mnt/pmem0/persistence; sudo mkdir /mnt/pmem0/wal; sudo chmod 777 /mnt/pmem0/wal; sudo mkdir /mnt/pmem1/wal; sudo chmod 777 /mnt/pmem1/wal; sudo mkdir /mnt/ssd/persistence; sudo chmod 777 /mnt/ssd/persistence; sudo mkdir /mnt/ssd/wal; sudo chmod 777 /mnt/ssd/wal;'
+```
+The folder should be cleaned between checks, to do so use:
+```
+ssh 10.0.0.2 'rm -r apache-ignite-2.10.0-bin; rm -r /mnt/pmem0/persistence/*; rm -r /mnt/pmem1/wal/*; rm -r /mnt/pmem0/wal/*; rm -r /mnt/ssd/persistence/*; rm -r /mnt/ssd/wal/*; ps aux | grep java' ; ssh 10.0.0.3 'rm -r apache-ignite-2.10.0-bin; rm -r /mnt/pmem0/persistence/*; rm -r /mnt/pmem1/wal/*; rm -r /mnt/pmem0/wal/*; rm -r /mnt/ssd/persistence/*; rm -r /mnt/ssd/wal/*; ps aux | grep java' ; ssh 10.0.0.4 'rm -r apache-ignite-2.10.0-bin; rm -r /mnt/pmem0/persistence/*; rm -r /mnt/pmem1/wal/*; rm -r /mnt/pmem0/wal/*; rm -r /mnt/ssd/persistence/*; rm -r /mnt/ssd/wal/*; ps aux | grep java'
+```
