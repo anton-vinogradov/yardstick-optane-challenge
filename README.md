@@ -40,7 +40,7 @@ What it finally means:
 
 # PMDK check
 To check the performance boost gained by Ignite PMDK plugin we're going to develop, we created a special benchmark 'puts', which compares puts speed at the in-memory, SSD, and Optane (both with FSYNC WAL mode).\
-Current results (without PMDK plugin):\
+Current results (without PMDK plugin):
 
 LOG_ONLY mode (additional profit from Optane can be the latency boost):
 ![image](https://user-images.githubusercontent.com/1394154/129345170-ed7660c1-9088-43d9-9fee-8965959c9b87.png)
@@ -49,7 +49,7 @@ FSYNC mode:
 
 # Helpful scripts
 As written before, we used 1 client node and 3 servers.\
-Lest define client node located at localhost and server nodes at 10.0.0.2, 10.0.0.3, 10.0.0.4\
+Lest define client node located at localhost and server nodes at 10.0.0.2, 10.0.0.3, 10.0.0.4
 
 To create all necessary folders use:
 ```
