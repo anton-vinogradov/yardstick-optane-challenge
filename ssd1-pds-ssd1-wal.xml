@@ -61,7 +61,7 @@
         <property name="name" value="dpl_mem_plc"/>
         <!-- Sets persistence enabled flag. -->
         <property name="persistenceEnabled" value="true"/>
-        <property name="maxSize" value="#{4L * 1024 * 1024 * 1024}"/>
+        <property name="maxSize" value="#{1L * 1024 * 1024 * 1024}"/>
     </bean>
 
     <bean id="dataStorageConfiguration" class="org.apache.ignite.configuration.DataStorageConfiguration">
@@ -69,7 +69,7 @@
             <ref bean="dataRegionConfiguration"/>
         </property>
         <!-- Sets property that defines behavior of wal fsync. -->
-        <property name="walMode" value="FSYNC"/>
+        <property name="walMode" value="LOG_ONLY"/>
         <property name="pageSize" value="#{4 * 1024}"/>
 
         <!-- Sets a total number of checkpoints to keep in the WAL history. -->
