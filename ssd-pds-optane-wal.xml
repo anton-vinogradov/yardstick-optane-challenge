@@ -77,7 +77,7 @@
         <!-- Sets size of a WAL segment. -->
         <property name="walSegmentSize" value="#{1024*1024*1024}"/>
         <property name="storagePath" value="/mnt/ssd/persistence"/>
-        <property name="walPath" value="/mnt/pmem1/wal"/>
-        <property name="walArchivePath" value="/mnt/pmem1/wal"/>
+        <property name="walPath" value="/mnt/pmem0/wal"/>
+        <property name="walArchivePath" value="/mnt/pmem0/wal"/>
     </bean>
 </beans>
